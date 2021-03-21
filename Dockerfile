@@ -9,8 +9,8 @@ RUN apt-get install -y nginx
 #VOLUME
 VOLUME /usr/share/nginx/www/
 #SISTEMA
-ARG webpage
-ADD $webpage /usr/share/nginx/www/
+#ARG webpage
+ADD counter_strike /usr/share/nginx/www/
 ##Arrancamos NGINX a través de ENTRYPOINT para que no pueda ser
 ##modificar en la creación del contenedor
 ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;"]
